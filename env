@@ -1,0 +1,50 @@
+cd /dev/shm
+du -hs
+rm -rf yizhan
+mkdir yizhan
+du -hs
+cd yizhan
+rsync -av ~/BlenderDomainRandomizer .
+cd BlenderDomainRandomizer
+
+cd /dev/shm/yizhan/BlenderDomainRandomizer
+screen
+
+blender -b env.blend --python src/main.py -- --folder /dev/shm/yizhan/pc11/1 --num-samples 20000
+ 
+rsync -av --exclude=*.csv --remove-source-files /dev/shm/yizhan/pc1/ coblab:/opt/data/yizhan/rd10/
+
+
+cd /dev/shm/yizhan
+ls
+du -hs
+
+cd pc1/1/images
+ls -l|grep "^-"| wc -l
+
+cd ~
+tar -cvf pc11.tar /dev/shm/yizhan/pc11
+
+rsync -av /dev/shm/yizhan/pc1 .
+
+logout
+rsync -av --remove-source-files --exclude=*.csv pc4.tar coblab:/opt/data/yizhan/rd15/
+
+
+cd /opt/data/yizhan/rd15
+tar -xvf pc1.tar -C /opt/data/yizhan/rd15/
+cd /opt/data/yizhan/rd10/dev/shm/yizhan
+mv pc10 /opt/data/yizhan/rd10/
+cd ../../..
+rm -rf dev
+
+pc1:bit
+pc2:glass
+pc3:brainfuck
+pc4:deadfish
+pc5:emo
+pc6:entropy
+pc7:false
+pc8:headache
+pc9:ook
+pc10:piet
