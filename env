@@ -10,7 +10,7 @@ cd BlenderDomainRandomizer
 cd /dev/shm/yizhan/BlenderDomainRandomizer
 screen
 
-blender -b env.blend --python src/main.py -- --folder /dev/shm/yizhan/pc11/1 --num-samples 20000
+blender -b env.blend --python src/main.py -- --folder /dev/shm/yizhan/pc1/1 --num-samples 20000
  
 rsync -av --exclude=*.csv --remove-source-files /dev/shm/yizhan/pc1/ coblab:/opt/data/yizhan/rd10/
 
