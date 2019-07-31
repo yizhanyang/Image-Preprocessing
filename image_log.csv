@@ -7,4 +7,4 @@ d5,random,"0.1,0.9",random,random,random,random,random,random,random,"0-5",,chec
 d6,random,"0.1,0.9",2,random,random,random,random,random,random,"0-5",,check_size_fixed
 d7,random,"0.1,0.9",2,0.1,random,random,random,random,random,"0-5",,noise_fixed
 d8,random,"0.1,0.9",2,0.1,"(1.0,1.0,1.0)",random,random,random,random,"0-5",,scale_fixed
-d8,random,"0.1,0.9",2,0.1,"(1.0,1.0,1.0)",random,random,random,random,"0-5",,num_texture_fixed
+d9,random,"0.1,0.9",2,0.1,"(1.0,1.0,1.0)",random,random,random,random,"0-5",,num_texture_fixed
